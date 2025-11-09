@@ -6,10 +6,56 @@
 	"title": "Flip Card",
 	"category": "widgets",
 	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
-	"example": {},
+	"description": "A card that flips to reveal more content on user action.",
+	"example": {
+		"innerBlocks": [
+			{
+				"name": "core/cover",
+				"attributes": {
+					"backgroundType": "image",
+					"sizeSlug": "full",
+					"url": "https://s.w.org/images/core/5.3/Windbuchencom.jpg",
+					"dimRatio": 30
+				},
+				"innerBlocks": [
+					{
+						"name": "core/paragraph",
+						"attributes": {
+							"content": "Front Side Content",
+							"align": "center",
+							"fontSize": "x-large"
+						}
+					}
+				]
+			},
+			{
+				"name": "makeiteasy/flip-card-reveal",
+				"innerBlocks": [
+					{
+						"name": "core/cover",
+						"attributes": {
+							"backgroundType": "image",
+							"sizeSlug": "full",
+							"url": "https://s.w.org/images/core/5.3/Windbuchencom.jpg"
+						}
+					}
+				]
+			}
+		],
+		"viewportWidth": 500
+	},
 	"supports": {
-		"html": false
+		"html": false,
+		"align": ["full", "wide"],
+		"color": {
+			"text": true,
+			"background": true
+		},
+		"background": {
+			"backgroundImage": true,
+			"backgroundSize": true
+		},
+		"lock": true
 	},
 	"textdomain": "flip-card",
 	"editorScript": "file:./index.js",
@@ -17,7 +63,6 @@
 	"style": "file:./style-index.css",
 	"viewStyle": "file:./view.css",
 	"script": "file:./view.js",
-	"allowedBlocks": ["makeiteasy/flip-card-reveal"],
 	"attributes": {
 		"flipTrigger": {
 			"enum": ["hover", "click"],

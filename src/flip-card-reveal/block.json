@@ -4,7 +4,7 @@
 	"version": "1.0.0",
 	"name": "makeiteasy/flip-card-reveal",
 	"title": "Flip Element",
-	"description": "Element with cover over image and hover effect with text",
+	"description": "Element which reveals on user action.",
 	"category": "widgets",
 	"icon": "coffee",
 	"textdomain": "flip-card",
@@ -23,5 +23,15 @@
 			"type": "boolean"
 		}
 	},
-	"parent": ["makeiteasy/flip-card"]
+	"parent": ["makeiteasy/flip-card"],
+	"supports": {
+		"inserter": false,
+		"color": {
+			"background": true
+		},
+		"background": {
+			"backgroundImage": true,
+			"backgroundSize": true
+		}
+	}
 }

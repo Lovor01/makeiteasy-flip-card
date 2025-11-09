@@ -15,22 +15,20 @@ import { useBlockProps, useInnerBlocksProps } from '@wordpress/block-editor';
  *
  * @return {Element} Element to render.
  */
-export const Edit = () => (
-	<>
-		<div { ...useInnerBlocksProps( useBlockProps() ) }>
-			<div
-				{ ...useInnerBlocksProps(
-					{},
-					{
-						orientation: 'horizontal',
-						template: [ [ 'core/cover' ] ],
-					}
-				) }
-			/>
-		</div>
-	</>
-);
+export const Edit = () => {
+	const innerBlocksProps = useInnerBlocksProps(
+		useBlockProps(),
+		{},
+		{
+			orientation: 'horizontal',
+			template: [ [ 'core/cover' ] ],
+		}
+	);
+
+	return <div { ...innerBlocksProps } />;
+};
 
 export const Save = () => {
-	return <div { ...useInnerBlocksProps.save( useBlockProps.save() ) }></div>;
+	const innerBlocksProps = useInnerBlocksProps.save( useBlockProps.save() );
+	return <div { ...innerBlocksProps }></div>;
 };
