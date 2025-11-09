@@ -1,0 +1,7 @@
+.wp-block-makeiteasy-flip-card {
+
+	&.show-overlay .wp-block-makeiteasy-flip-card-reveal {
+		visibility: visible;
+		z-index: 1;
+	}
+}

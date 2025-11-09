@@ -1,0 +1,26 @@
+
+.wp-block-makeiteasy-flip-card-reveal {
+	opacity: 0;
+	transition:
+		opacity 0.5s ease,
+		visibility 0s 0.5s,
+		z-index 0s 0.5s;
+}
+
+.wp-block-makeiteasy-flip-card {
+
+	&.mie-flipped .wp-block-makeiteasy-flip-card-reveal,
+	&.flip-on-hover:hover .wp-block-makeiteasy-flip-card-reveal {
+		opacity: 1;
+		visibility: visible;
+		z-index: 1;
+		transition:
+			opacity 0.5s ease,
+			visibility 0s,
+			z-index 0s;
+	}
+
+	&.flip-on-click {
+		cursor: pointer;
+	}
+}

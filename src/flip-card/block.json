@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "makeiteasy/flip-card",
+	"version": "0.1.0",
+	"title": "Flip Card",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "flip-card",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewStyle": "file:./view.css",
+	"script": "file:./view.js",
+	"allowedBlocks": ["makeiteasy/flip-card-reveal"],
+	"attributes": {
+		"flipTrigger": {
+			"enum": ["hover", "click"],
+			"default": "hover"
+		},
+		"outerLink": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "href"
+		},
+		"opensInNewTab": {
+			"enum": ["_blank", "_self"],
+			"default": "_self",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "target"
+		}
+	}
+}

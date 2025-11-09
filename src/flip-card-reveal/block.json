@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"version": "1.0.0",
+	"name": "makeiteasy/flip-card-reveal",
+	"title": "Flip Element",
+	"description": "Element with cover over image and hover effect with text",
+	"category": "widgets",
+	"icon": "coffee",
+	"textdomain": "flip-card",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"example": {},
+	"attributes": {
+		"url": {
+			"type": "string",
+			"source": "attribute",
+			"attribute": "href",
+			"selector": "a"
+		},
+		"opensInNewTab": {
+			"type": "boolean"
+		}
+	},
+	"parent": ["makeiteasy/flip-card"]
+}

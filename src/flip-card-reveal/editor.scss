@@ -1,0 +1,20 @@
+.wp-block-makeiteasy-cover-hover-element {
+	&:hover .overlay {
+		visibility: hidden;
+	}
+	.overlay.show-overlay {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.title.title {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&.wp-block-makeiteasy-cover-hover-element a,
+	&.wp-block-makeiteasy-cover-hover-element a:hover	{
+		color: var(--wp--preset--color--white-text);
+	}
+
+}
