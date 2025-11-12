@@ -11,7 +11,8 @@ function setEvents() {
 
 		selectedElements.forEach( ( el ) => {
 			el.addEventListener( 'click', () => {
-				el.classList.toggle( 'mie-flipped' );
+				const state = el.classList.toggle( 'mie-flipped' );
+				el.setAttribute( 'aria-expanded', state );
 			} );
 		} );
 		return true;

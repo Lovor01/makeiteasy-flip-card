@@ -11,7 +11,7 @@ import {
 	BlockControls,
 	LinkControl,
 } from '@wordpress/block-editor';
-import { useState, useId } from '@wordpress/element';
+import { useState, useId, useRef } from '@wordpress/element';
 import {
 	ToolbarGroup,
 	ToolbarButton,
@@ -21,6 +21,7 @@ import {
 import { link as linkIcon, customLink, flipHorizontal } from '@wordpress/icons';
 import clsx from 'clsx';
 import { flipClasses } from './helpers';
+import FlipCardConfirmDialog from './components/confirm-dialog';
 
 // import { __ } from "@wordpress/i18n";
 
@@ -40,6 +41,29 @@ const Edit = ( {
 	// outerLink because once inner flipped element could also have a link attribute
 	const [ showOverlay, setShowOverlay ] = useState( false );
 	const [ showLinkpopup, setShowLinkPopup ] = useState( false );
+	const [ confirmDialogAction, setConfirmDialogAction ] = useState( null );
+	const callbackDialogAction = useRef( null );
+
+	const handleDialogConfirmEvent = () => {
+		setConfirmDialogAction( null );
+		if ( callbackDialogAction.current ) {
+			callbackDialogAction.current();
+		}
+	};
+
+	const doActionWithPossibleConfirmation = (
+		action,
+		callback,
+		confirmationNeeded
+	) => {
+		if ( confirmationNeeded ) {
+			callbackDialogAction.current = callback;
+			setConfirmDialogAction( action );
+		} else {
+			callback();
+		}
+	};
+
 	const clickIcon = (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +100,7 @@ const Edit = ( {
 			<BlockControls>
 				<ToolbarGroup>
 					<ToolbarButton
-						text="Show overlay"
+						icon="image-flip-horizontal"
 						onClick={ () => {
 							setShowOverlay( ! showOverlay );
 						} }
@@ -93,8 +117,18 @@ const Edit = ( {
 							},
 							{
 								title: 'Click',
-								onClick: () =>
-									setAttributes( { flipTrigger: 'click' } ),
+								onClick: () => {
+									doActionWithPossibleConfirmation(
+										'setFlipModeClick',
+										() => {
+											setAttributes( {
+												flipTrigger: 'click',
+												outerLink: null,
+											} );
+										},
+										Boolean( outerLink )
+									);
+								},
 								isActive: flipTrigger === 'click',
 								icon: clickIcon,
 							},
@@ -116,10 +150,21 @@ const Edit = ( {
 								key={ linkControlId }
 								value={ { url: outerLink, opensInNewTab } }
 								onChange={ ( link ) => {
-									setAttributes( {
-										outerLink: link.url,
-										opensInNewTab: link.opensInNewTab,
-									} );
+									const newFlipTrigger = link.url
+										? 'hover'
+										: flipTrigger;
+									doActionWithPossibleConfirmation(
+										'setURL',
+										() => {
+											setAttributes( {
+												outerLink: link.url,
+												opensInNewTab:
+													link.opensInNewTab,
+												flipTrigger: newFlipTrigger,
+											} );
+										},
+										flipTrigger === 'click'
+									);
 								} }
 								onRemove={ () => {
 									setAttributes( { outerLink: undefined } );
@@ -152,6 +197,13 @@ const Edit = ( {
 						],
 					}
 				) }
+			/>
+			<FlipCardConfirmDialog
+				onConfirm={ handleDialogConfirmEvent }
+				action={ confirmDialogAction }
+				onCancel={ () => {
+					setConfirmDialogAction( null );
+				} }
 			/>
 		</>
 	);

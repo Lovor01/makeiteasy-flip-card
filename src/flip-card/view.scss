@@ -9,7 +9,7 @@
 
 .wp-block-makeiteasy-flip-card {
 
-	&:where(.flip-on-hover:hover, .flip-on-hover:active) .wp-block-makeiteasy-flip-card-reveal,
+	&:where(.flip-on-hover:hover, .flip-on-hover:active, .flip-on-hover:focus-within, .flip-on-click:focus-within) .wp-block-makeiteasy-flip-card-reveal,
 	&.mie-flipped .wp-block-makeiteasy-flip-card-reveal {
 		opacity: 1;
 		visibility: visible;

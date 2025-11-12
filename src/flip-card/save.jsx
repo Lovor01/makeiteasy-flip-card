@@ -36,7 +36,13 @@ const save = ( { attributes: { flipTrigger, outerLink, opensInNewTab } } ) => {
 			: innerBlocksProps;
 	};
 
-	return <div { ...conditionallyWrapInAnchor() } />;
+	return (
+		<div
+			{ ...conditionallyWrapInAnchor() }
+			role={ flipTrigger === 'click' ? 'button' : null }
+			tabIndex="0"
+		/>
+	);
 };
 
 export default save;
