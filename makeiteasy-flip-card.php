@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name:       MakeITeasy Flip Card
- * Description:       Example block scaffolded with Create Block tool.
- * Version:           0.1.0
- * Requires at least: 6.7
+ * Description:       Flip Card Block, flipping on hover or click.
+ * Version:           1.0.0
+ * Requires at least: 6.8
  * Requires PHP:      7.4
  * Author:            Lovro Hrust
- * License:           GPL-2.0-or-later
- * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * License:           LGPLv3
+ * License URI:       https://www.gnu.org/licenses/lgpl-3.0.html
  * Text Domain:       makeiteasy-flip-card
  *
  * @package Makeiteasy

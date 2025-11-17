@@ -1,55 +1,45 @@
-=== Flip Card ===
-Contributors:      The WordPress Contributors
+=== MakeITeasy Flip Card ===
+Contributors:      lovor
+Donate link:       https://buymeacoffee.com/lovro
 Tags:              block
-Tested up to:      6.7
-Stable tag:        0.1.0
-License:           GPL-2.0-or-later
-License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+Tested up to:      6.9
+Stable tag:        1.0.0
+License:           LGPLv3
+License URI:       https://www.gnu.org/licenses/lgpl-3.0.html
 
-Example block scaffolded with Create Block tool.
+Flip card block - revealing "other side" on hover or click. Aligned with core blocks styles and functioning.
 
 == Description ==
 
-This is the long description. No limit, and you can use Markdown (as well as in the following sections).
+Flip card is popular way Flip card block has controls in toolbar where you can choose if other side reveals on hover or on click. It has possibility to set a link on a whole card
+if opening mode is hover. Block has a button in toolbar which controls which side of the flip card is shown in editor, and which you are currently editing.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+= Key Features =
+
+- 🥇 **Feature-Rich** and **free**.
+- 🥈 **Fully Open Source**: Including the block source code. Fork and adjust as needed.
+- 🥉 **Developer friendly**: Unopinionated starting CSS - styled through theme.
+- ⏲️ **Future-Proof Compatibility**: Guaranteed compatibility with future WordPress versions.
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
+= From block editor: =
 
-e.g.
+Search for 'makeiteasy flip card' in the block editor when adding a new block via the '+' sign in the top bar.
+
+= Standard Installation: =
 
 1. Upload the plugin files to the `/wp-content/plugins/flip-card` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
+2. Activate the plugin through the 'Plugins' screen in WordPress
 
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
-
-An answer to that question.
-
-= What about foo bar? =
-
-Answer to foo bar dilemma.
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
 
 == Changelog ==
 
-= 0.1.0 =
+= 1.0.0 =
 * Release
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation." Arbitrary sections will be shown below the built-in sections outlined above.

@@ -1,9 +1,9 @@
 {
-	"name": "flip-card",
-	"version": "0.1.0",
+	"name": "makeiteasy-flip-card",
+	"version": "1.0.0",
 	"description": "Example block scaffolded with Create Block tool.",
 	"author": "The WordPress Contributors",
-	"license": "GPL-2.0-or-later",
+	"license": "LGPLv3",
 	"main": "build/index.js",
 	"scripts": {
 		"build": "wp-scripts build --blocks-manifest",
@@ -16,8 +16,8 @@
 		"start:hot": "wp-scripts start --blocks-manifest --hot"
 	},
 	"devDependencies": {
-		"@wordpress/icons": "^11.1.0",
-		"@wordpress/scripts": "^30.25.0",
+		"@wordpress/icons": "^11.2.0",
+		"@wordpress/scripts": "^31.0.0",
 		"dotenv": "^17.2.3"
 	},
 	"dependencies": {
