@@ -1,7 +1,7 @@
 === MakeITeasy Flip Card ===
 Contributors:      lovor
 Donate link:       https://buymeacoffee.com/lovro
-Tags:              block
+Tags:              block, flip card, reveal card
 Tested up to:      6.9
 Stable tag:        1.0.0
 License:           LGPLv3
@@ -11,15 +11,8 @@ Flip card block - revealing "other side" on hover or click. Aligned with core bl
 
 == Description ==
 
-Flip card is popular way Flip card block has controls in toolbar where you can choose if other side reveals on hover or on click. It has possibility to set a link on a whole card
-if opening mode is hover. Block has a button in toolbar which controls which side of the flip card is shown in editor, and which you are currently editing.
-
-= Key Features =
-
-- 🥇 **Feature-Rich** and **free**.
-- 🥈 **Fully Open Source**: Including the block source code. Fork and adjust as needed.
-- 🥉 **Developer friendly**: Unopinionated starting CSS - styled through theme.
-- ⏲️ **Future-Proof Compatibility**: Guaranteed compatibility with future WordPress versions.
+An interactive web element that reveals additional content on hover or click. The Flip Card block includes toolbar controls to choose whether the back side appears on hover or on click.
+When the opening mode is set to hover, you can also assign a link to the entire card.
 
 == Installation ==
 
@@ -29,17 +22,38 @@ Search for 'makeiteasy flip card' in the block editor when adding a new block vi
 
 = Standard Installation: =
 
-1. Upload the plugin files to the `/wp-content/plugins/flip-card` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/makeiteasy-flip-card` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress
-
-
-== Frequently Asked Questions ==
-
-
-== Screenshots ==
-
 
 == Changelog ==
 
 = 1.0.0 =
-* Release
+- Release
+
+== Frequently Asked Questions ==
+
+= How to edit other side of the card? =
+
+Click on the block to select it, then use the block toolbar button to toggle side of the card.
+
+== Screenshots ==
+
+1. Flip Card block in editor - front side.
+2. Flip Card block in editor - back side.
+
+== Key Features ==
+
+- 🥇 **Feature-Rich**.
+- 🥈 **Fully Open Source**: Including the block source code. Fork and adjust as needed.
+- 🥉 **Developer friendly**: Unopinionated starting CSS - styled through theme.
+- ⏲️ **Future-Proof Compatibility**: Guaranteed compatibility with future WordPress versions by using recommended block coding practices.
+
+== Developer Notes ==
+
+There is a full source code on [github](https://github.com/Lovor01/makeiteasy-flip-card). You can investigate code, adjust it to your needs, collaborate, ...
+Development:
+- Run `npm install` to install dependencies.
+- To develop, either:
+  - remove webpack.config.json and run `npm run start` to start a development server without live reloading.
+  - leave webpack.config.json and set .env file with host, cert_location and key_location variables and run `npm run start` to start a development server with live reloading.
+- To build for production, run `npm run build`.
