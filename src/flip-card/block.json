@@ -25,6 +25,14 @@
 							"align": "center",
 							"fontSize": "x-large"
 						}
+					},
+					{
+						"name": "core/paragraph",
+						"attributes": {
+							"content": "Photo by <a href='https://unsplash.com/@jannerboy62?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText' style='color:#fff;'>Nick Fewings</a> on <a href='https://unsplash.com/photos/white-blue-and-yellow-concrete-building-R_0YAMYTmSg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText' style='color:#fff;'>Unsplash</a>",
+							"align": "center",
+							"fontSize": "medium"
+						}
 					}
 				]
 			},

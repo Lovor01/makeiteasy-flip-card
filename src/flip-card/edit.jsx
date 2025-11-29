@@ -1,5 +1,5 @@
 /**
- * Parent block for cover-hover blocks
+ * Parent block for flip-card-reveal block
  */
 
 import './editor.scss';
@@ -87,13 +87,6 @@ const Edit = ( {
 		</svg>
 	);
 	const linkControlId = useId();
-	// const memoizedValue = useMemo(
-	// 	() => ( {
-	// 		url: outerLink,
-	// 		opensInNewTab: opensInNewTab === '_blank',
-	// 	} ),
-	// 	[ outerLink, opensInNewTab ]
-	// );
 
 	return (
 		<>
@@ -105,6 +98,7 @@ const Edit = ( {
 							setShowOverlay( ! showOverlay );
 						} }
 						isPressed={ showOverlay }
+						label="Switch sides"
 					/>
 					<ToolbarDropdownMenu
 						controls={ [
@@ -134,6 +128,7 @@ const Edit = ( {
 							},
 						] }
 						icon={ dropDownIcon }
+						label="Flip Trigger"
 					/>
 				</ToolbarGroup>
 				<ToolbarGroup>
@@ -143,6 +138,7 @@ const Edit = ( {
 							setShowLinkPopup( ! showLinkpopup );
 						} }
 						isActive={ showLinkpopup }
+						label="Add link"
 					/>
 					{ showLinkpopup && (
 						<Popover placement="bottom-start" variant="toolbar">

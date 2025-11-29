@@ -22,6 +22,11 @@ import save from './save.jsx';
 import { ReactComponent as BlockIcon } from './block_icon.svg';
 
 import metadata from './block.json';
+import exampleImage from './assets/block-example.jpg';
+
+metadata.example.innerBlocks[ 0 ].attributes.url = exampleImage;
+metadata.example.innerBlocks[ 1 ].innerBlocks[ 0 ].attributes.url =
+	exampleImage;
 
 /**
  * Every block starts by registering a new block type definition.
@@ -30,6 +35,7 @@ import metadata from './block.json';
  */
 registerBlockType( metadata.name, {
 	icon: BlockIcon,
+	example: metadata.example,
 
 	/**
 	 * @see ./edit_save.jsx
