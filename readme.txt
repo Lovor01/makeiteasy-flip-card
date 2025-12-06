@@ -3,7 +3,7 @@ Contributors:      lovor
 Donate link:       https://buymeacoffee.com/lovro
 Tags:              block, flip card, reveal card
 Tested up to:      6.9
-Stable tag:        1.0.0
+Stable tag:        1.0.1
 License:           LGPLv3
 License URI:       https://www.gnu.org/licenses/lgpl-3.0.html
 
@@ -26,6 +26,9 @@ Search for 'makeiteasy flip card' in the block editor when adding a new block vi
 2. Activate the plugin through the 'Plugins' screen in WordPress
 
 == Changelog ==
+
+= 1.0.1 =
+Fixed issue with inner block initialization.
 
 = 1.0.0 =
 - Release

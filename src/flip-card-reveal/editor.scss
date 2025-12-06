@@ -1,20 +1,9 @@
-.wp-block-makeiteasy-cover-hover-element {
-	&:hover .overlay {
-		visibility: hidden;
-	}
-	.overlay.show-overlay {
-		visibility: visible;
-		opacity: 1;
-	}
+.wp-block-makeiteasy-flip-card-reveal {
 
-	.title.title {
-		visibility: visible;
-		opacity: 1;
-	}
+	> * {
 
-	&.wp-block-makeiteasy-cover-hover-element a,
-	&.wp-block-makeiteasy-cover-hover-element a:hover	{
-		color: var(--wp--preset--color--white-text);
+		outline: var(--wp-admin-theme-color-darker-20, #003e7b) 2px solid;
+		outline-offset: 4px;
 	}
 
 }
