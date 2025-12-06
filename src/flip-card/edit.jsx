@@ -167,7 +167,7 @@ const Edit = ( {
 					{
 						orientation: 'horizontal',
 						template: [
-							[ 'core/cover' ],
+							[ 'makeiteasy/flip-card-front' ],
 							[ 'makeiteasy/flip-card-reveal' ],
 						],
 					}

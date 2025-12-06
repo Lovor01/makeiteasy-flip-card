@@ -17,18 +17,10 @@ import './style.scss';
 /**
  * Internal dependencies
  */
-import Edit from './edit.jsx';
-import save from './save.jsx';
+import { Edit, Save } from './edit_save.jsx';
 import { ReactComponent as BlockIcon } from './block_icon.svg';
 
 import metadata from './block.json';
-import exampleImage from './assets/block-example.jpg';
-import saveDeprecated1 from './deprecated/v1/save.jsx';
-import deprecatedAttributes1 from './deprecated/v1/attributes.json';
-
-metadata.example.innerBlocks[ 0 ].attributes.url = exampleImage;
-metadata.example.innerBlocks[ 1 ].innerBlocks[ 0 ].attributes.url =
-	exampleImage;
 
 /**
  * Every block starts by registering a new block type definition.
@@ -37,14 +29,14 @@ metadata.example.innerBlocks[ 1 ].innerBlocks[ 0 ].attributes.url =
  */
 registerBlockType( metadata.name, {
 	icon: BlockIcon,
-	example: metadata.example,
 
 	/**
-	 * @see ./edit_save.jsx
+	 * @see ./edit.js
 	 */
 	edit: Edit,
-	save,
-	deprecated: [
-		{ save: saveDeprecated1, attributes: deprecatedAttributes1 },
-	],
+
+	/**
+	 * @see ./save.js
+	 */
+	save: Save,
 } );

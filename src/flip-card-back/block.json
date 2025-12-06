@@ -1,0 +1,37 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"version": "1.0.0",
+	"name": "makeiteasy/flip-card-back",
+	"title": "Flip Element",
+	"description": "Back part of block.",
+	"category": "widgets",
+	"icon": "coffee",
+	"textdomain": "flip-card",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"example": {},
+	"attributes": {
+		"url": {
+			"type": "string",
+			"source": "attribute",
+			"attribute": "href",
+			"selector": "a"
+		},
+		"opensInNewTab": {
+			"type": "boolean"
+		}
+	},
+	"parent": ["makeiteasy/flip-card"],
+	"supports": {
+		"inserter": false,
+		"color": {
+			"background": true
+		},
+		"background": {
+			"backgroundImage": true,
+			"backgroundSize": true
+		}
+	}
+}

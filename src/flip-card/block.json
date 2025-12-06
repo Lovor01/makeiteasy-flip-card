@@ -65,6 +65,10 @@
 		},
 		"lock": true
 	},
+	"styles": [
+		{ "name": "default", "label": "Default", "isDefault": true },
+		{ "name": "rotate-horizontal", "label": "Rotate" }
+	],
 	"textdomain": "flip-card",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",

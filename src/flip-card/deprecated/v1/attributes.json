@@ -1,0 +1,19 @@
+{
+	"flipTrigger": {
+		"enum": ["hover", "click"],
+		"default": "hover"
+	},
+	"outerLink": {
+		"type": "string",
+		"source": "attribute",
+		"selector": "a",
+		"attribute": "href"
+	},
+	"opensInNewTab": {
+		"enum": ["_blank", "_self"],
+		"default": "_self",
+		"source": "attribute",
+		"selector": "a",
+		"attribute": "target"
+	}
+}
