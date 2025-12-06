@@ -29,3 +29,6 @@ node_modules/
 
 # workspace file
 flip-card.code-workspace
+
+#developer files
+.dev

@@ -38,8 +38,9 @@ Click on the block to select it, then use the block toolbar button to toggle sid
 
 == Screenshots ==
 
-1. Flip Card block in editor - front side.
-2. Flip Card block in editor - back side.
+1. front-side.jpg
+2. back-side.jpg
+3. change-button.png
 
 == Key Features ==
 
